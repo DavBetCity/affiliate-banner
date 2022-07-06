@@ -2,9 +2,9 @@ import Head from 'next/head';
 
 //######################### COMPONENT TYPES ################################################
 const defaultProps = {
-  title: 'New Project',
-  keywords: 'Millionaire road',
-  description: 'Process and sava data',
+  title: '',
+  keywords: '',
+  description: '',
 };
 
 type Props = {

@@ -10,7 +10,7 @@ const Wrapper = tw.div``;
 //######################### COMPONENT ######################################################
 
 const Footer: NextPage<Props> = () => {
-  return <Wrapper>Footer</Wrapper>;
+  return <Wrapper></Wrapper>;
 };
 
 export default Footer;

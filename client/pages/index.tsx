@@ -14,7 +14,7 @@ const Home: NextPage<Props> = () => {
   return (
     <>
       <Meta title='Homepage' />
-      <Wrapper>Inside Main</Wrapper>
+      <Wrapper></Wrapper>
     </>
   );
 };
