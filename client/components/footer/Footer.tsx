@@ -1,5 +1,4 @@
 import tw from 'twin.macro';
-import Meta from '../components/core/Meta';
 
 //######################### COMPONENT TYPES ################################################
 import type { NextPage } from 'next';
@@ -10,13 +9,8 @@ const Wrapper = tw.div``;
 
 //######################### COMPONENT ######################################################
 
-const Home: NextPage<Props> = () => {
-  return (
-    <>
-      <Meta title='Homepage' />
-      <Wrapper>Inside Main</Wrapper>
-    </>
-  );
+const Footer: NextPage<Props> = () => {
+  return <Wrapper>Footer</Wrapper>;
 };
 
-export default Home;
+export default Footer;

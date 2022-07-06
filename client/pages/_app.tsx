@@ -1,8 +1,22 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import Layout from '../components/core/Layout';
+import GlobalStyles from '../styles/GlobalStyles';
+
+//######################### COMPONENT TYPES ################################################
+import type { AppProps } from 'next/app';
+
+//######################### COMPONENT STYLES ###############################################
+
+//######################### COMPONENT ######################################################
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <GlobalStyles />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
