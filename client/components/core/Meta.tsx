@@ -1,10 +1,10 @@
-import Head from 'next/head';
+import Head from "next/head";
 
 //######################### COMPONENT TYPES ################################################
 const defaultProps = {
-  title: '',
-  keywords: '',
-  description: '',
+  title: "",
+  keywords: "",
+  description: "",
 };
 
 type Props = {
@@ -19,12 +19,12 @@ type Props = {
 const Meta = ({ description, keywords, title }: Props) => {
   return (
     <Head>
-      <meta charSet='utf-8' />
-      <meta name='keywords' content={keywords} />
-      <meta name='description' content={description} />
-      <meta name='viewport' content='width=device-width, initial-scale=1' />
+      <meta charSet="utf-8" />
+      <meta name="keywords" content={keywords} />
+      <meta name="description" content={description} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <link rel='icon' href='../favicon.ico' />
+      <link rel="icon" href="../favicon.ico" />
 
       <title>{title}</title>
     </Head>

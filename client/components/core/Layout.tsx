@@ -1,5 +1,5 @@
 import Meta from './Meta';
-import Navbar from '../navbar/Navbar';
+import Banner from '../navbar/Banner';
 import Footer from '../footer/Footer';
 import tw, { styled } from 'twin.macro';
 import React, { ReactNode } from 'react';
@@ -12,7 +12,6 @@ type Props = {
 //######################### COMPONENT STYLES ###############################################
 const Wrapper = styled.div`
   ${tw`grid min-h-screen`};
-  grid-template-columns: 100%;
   grid-template-rows: auto 1fr auto;
 `;
 
@@ -24,7 +23,7 @@ const Layout = ({ children }: Props) => {
   return (
     <Wrapper>
       <Meta />
-      <Navbar />
+      <Banner />
       <MainWrapper>
         <Main>{children}</Main>
       </MainWrapper>
