@@ -11,8 +11,8 @@ type Props = {
 
 //######################### COMPONENT STYLES ###############################################
 const Wrapper = styled.div`
-  ${tw`grid min-h-screen`};
   grid-template-rows: auto 1fr auto;
+  ${tw`grid min-h-screen overscroll-contain`};
 `;
 
 const MainWrapper = tw.div``;
