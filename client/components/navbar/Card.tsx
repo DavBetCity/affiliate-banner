@@ -1,13 +1,17 @@
 import Odd from './Odd';
 import Team from './Team';
+import tw from 'twin.macro';
 import MatchInfo from './MatchInfo';
-import tw, { styled } from 'twin.macro';
 
 //######################### COMPONENT TYPES ################################################
-type Props = {};
+type Props = {
+  home: any;
+  draw: any;
+  away: any;
+};
 
 //######################### COMPONENT STYLES ###############################################
-const Wrapper = tw.div`grid auto-rows-min py-5 px-7 gap-3 border-gray-500 border-l-[0.1px] border-r-[0.1px] `;
+const Wrapper = tw.div`grid auto-rows-min py-3 px-7 gap-3 border-gray-500 border-l-[0.1px] border-r-[0.1px] `;
 
 const Row = tw.div`grid grid-flow-col gap-4 min-w-[15rem]`;
 
@@ -17,7 +21,7 @@ const OddsWrapper = tw(Row)``;
 
 //######################### COMPONENT ######################################################
 
-const Card: React.FC<Props> = () => {
+const Card: React.FC<Props> = ({ home, draw, away }) => {
   return (
     <Wrapper>
       <MatchWrapper>
@@ -26,9 +30,21 @@ const Card: React.FC<Props> = () => {
         <Team name="FEY" imgurl="./tshirt-icon.png" home={false} />
       </MatchWrapper>
       <OddsWrapper>
-        <Odd label="1" odd={15.0111} />
-        <Odd label="x" odd={15.0111} />
-        <Odd label="2" odd={15.1} />
+        <Odd
+          label={home.label}
+          odd={home.score}
+          url={home.url}
+        />
+        <Odd
+          label={draw.label}
+          odd={draw.score}
+          url={draw.url}
+        />
+        <Odd
+          label={away.label}
+          odd={away.score}
+          url={away.url}
+        />
       </OddsWrapper>
     </Wrapper>
   );

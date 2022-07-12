@@ -1,8 +1,11 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import tw, { styled } from 'twin.macro';
 
 //######################### COMPONENT TYPES ################################################
 type Props = {
   odd?: number;
+  url: string;
   label?: string;
 };
 
@@ -21,13 +24,25 @@ const Stake = tw.span``;
 
 //######################### COMPONENT ######################################################
 
-const Odd: React.FC<Props> = ({ odd, label }) => {
+const Odd: React.FC<Props> = ({ odd, label, url }) => {
+  const router = useRouter();
+
+  const handleRedirect = (e: any) => {
+    e.preventDefault();
+
+    if (url !== '') {
+      router.push(url);
+    }
+  };
+
   return (
-    <Wrapper>
-      {odd ? <ShadowLight /> : <Shadow />}
-      {label && <Label>{label}</Label>}
-      {odd && <Stake>{odd.toFixed(2)}</Stake>}
-    </Wrapper>
+    <Link href={url}>
+      <Wrapper onClick={handleRedirect}>
+        {odd ? <ShadowLight /> : <Shadow />}
+        {label && <Label>{label}</Label>}
+        {odd && <Stake>{odd.toFixed(2)}</Stake>}
+      </Wrapper>
+    </Link>
   );
 };
 

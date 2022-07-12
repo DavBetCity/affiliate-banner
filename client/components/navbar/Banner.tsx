@@ -1,5 +1,6 @@
 import Card from './Card';
 import tw, { styled } from 'twin.macro';
+import oddsData from '../../data/oddsData.js';
 
 //######################### COMPONENT TYPES ################################################
 type Props = {};
@@ -19,16 +20,14 @@ const Banner: React.FC<Props> = () => {
   return (
     <Wrapper>
       <Cards>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {oddsData.map((match) => (
+          <Card
+            key={match.id}
+            home={match.odd_home}
+            draw={match.odd_draw}
+            away={match.odd_away}
+          />
+        ))}
       </Cards>
       <Disclaimer>
         Wat kost gokken jou? Stop op tijd. 18+
