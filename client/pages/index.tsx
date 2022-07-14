@@ -1,6 +1,5 @@
 import tw from 'twin.macro';
 import Meta from '../components/core/Meta';
-import Line from '../components/navbar/Line';
 
 //######################### COMPONENT TYPES ################################################
 import type { NextPage } from 'next';

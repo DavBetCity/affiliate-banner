@@ -13,8 +13,8 @@ type Props = {
 //######################### COMPONENT STYLES ###############################################
 const Wrapper = tw.div`relative grid auto-rows-min py-3 px-10 gap-3 border-gray-500`;
 
-const Shadow = tw.div`absolute w-full h-full skew-x-[-12deg] border-opacity-20 border-l-[1px] border-r-[1px]`;
-const Row = tw.div`grid grid-flow-col gap-4 min-w-[15rem]`;
+const Shadow = tw.div`z-0 absolute w-full h-full skew-x-[-12deg] border-opacity-20 border-l-[1px] border-r-[1px]`;
+const Row = tw.div`z-10 grid grid-flow-col gap-4 min-w-[15rem]`;
 
 const MatchWrapper = tw(Row)``;
 

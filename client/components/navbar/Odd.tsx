@@ -26,7 +26,6 @@ const Stake = tw.span``;
 
 const Odd: React.FC<Props> = ({ odd, label, url }) => {
   const router = useRouter();
-
   const handleRedirect = (e: any) => {
     e.preventDefault();
 
